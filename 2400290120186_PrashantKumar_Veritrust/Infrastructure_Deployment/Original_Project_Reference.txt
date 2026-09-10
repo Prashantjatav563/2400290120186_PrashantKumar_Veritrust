@@ -1,0 +1,4 @@
+Original ML project repository:
+https://github.com/Prashantjatav563/Fake-News-Detection
+
+The original project contains the Python/Streamlit ML application. This submission package focuses on the VeriTrust static frontend and AWS case-study evidence.

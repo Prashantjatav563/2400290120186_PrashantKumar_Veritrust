@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeriTrust | AI Fake News Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">VT</div>
+      <div>
+        <div class="brand-name">VeriTrust</div>
+        <div class="brand-subtitle">AI Fake News Detector</div>
+      </div>
+    </div>
+    <div class="status"><span></span> System Ready</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">AI-POWERED NEWS VERIFICATION</div>
+      <h1>Is this news <span>real or fake?</span></h1>
+      <p>Analyze a news article with the VeriTrust interface and review its verification result, linguistic statistics, and keyword insights.</p>
+    </section>
+
+    <section class="card verifier">
+      <div class="card-title">
+        <div>
+          <h2>Verify an article</h2>
+          <p>Paste article text or provide a public article URL.</p>
+        </div>
+        <div class="badge">ML ANALYSIS</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-mode="text">Article Text</button>
+        <button class="tab" data-mode="url">Article URL</button>
+      </div>
+
+      <div id="text-panel" class="panel">
+        <textarea id="articleText" placeholder="Paste the news article text here..."></textarea>
+      </div>
+
+      <div id="url-panel" class="panel hidden">
+        <input id="articleUrl" type="url" placeholder="https://example.com/news/article">
+      </div>
+
+      <button id="verifyBtn" class="verify-btn">Verify Article <span>→</span></button>
+      <p class="demo-note">Static frontend demo — connect this interface to the Python/Streamlit ML backend for live predictions.</p>
+    </section>
+
+    <section id="result" class="card result hidden">
+      <div class="result-head">
+        <div>
+          <div class="eyebrow">DEMO RESULT</div>
+          <h2>Verification Preview</h2>
+        </div>
+        <div id="resultBadge" class="result-badge">READY</div>
+      </div>
+      <p id="resultText"></p>
+      <div class="stats">
+        <div><strong id="wordCount">0</strong><span>Words</span></div>
+        <div><strong id="readTime">0 min</strong><span>Estimated reading</span></div>
+        <div><strong>TF-IDF</strong><span>Keyword analysis</span></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature"><div class="feature-icon">01</div><h3>ML Prediction</h3><p>Designed for a trained text-classification model.</p></div>
+      <div class="feature"><div class="feature-icon">02</div><h3>Keyword Diagnostics</h3><p>Visualize important terms contributing to analysis.</p></div>
+      <div class="feature"><div class="feature-icon">03</div><h3>Verification History</h3><p>Keep recent verification activity within the session.</p></div>
+    </section>
+  </main>
+
+  <footer>VeriTrust · AI-Powered Fake News Detection · Static AWS Demo</footer>
+  <script src="script.js"></script>
+</body>
+</html>
